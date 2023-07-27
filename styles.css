@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#main-container {
+  height: 98vh;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form input {
+  display: block;
+  box-sizing: border-box;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+#form input:focus {
+  outline: none;
+}
+
+#form #error-display{
+  color:red;
+  margin-top: 0px;;
+}
+
+.user-card {
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.user-card h2,
+p {
+  width: fit-content;
+}
+
+.avatar img {
+  height: 150px;
+  width: 150px;
+  border: 12px solid white;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-details h2 {
+  margin: 10px 0px;
+}
+
+.stats {
+  width: 100%;
+}
+
+.user-details .stats div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-details .stats div p {
+  margin: 3px 0px;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 576px) {
+  .user-card {
+    flex-direction: row;
+  }
+
+  .user-details {
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+}
