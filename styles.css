@@ -101,4 +101,8 @@ p {
     align-items: flex-start;
     margin-left: 20px;
   }
+
+  .user-details > p{
+    text-align: left;
+  }
 }
