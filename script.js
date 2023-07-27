@@ -50,6 +50,8 @@ class GitHub {
 
   async getUserDetails() {
     const errorDisplay = document.querySelector('#error-display');
+    const form = document.querySelector("#form");
+
     try {
       const response = await fetch(
         `https://api.github.com/users/${this.userId}`
@@ -58,10 +60,11 @@ class GitHub {
           throw "Invalid user id";
       }
       else{
-        errorDisplay.textContent = ""
+        form.elements.searchUser.value = "";
+        errorDisplay.textContent = "";
+        const user = await response.json();
+        this.createUserCard(user);
       }
-      const user = await response.json();
-      this.createUserCard(user);
     } catch (error) {
        if(error === "Invalid user id"){
         errorDisplay.textContent = "Please enter a valid user id!"
@@ -86,4 +89,5 @@ form.addEventListener("submit", (e) => {
     const user = new GitHub(userId);
     user.getUserDetails();
   }
+
 });

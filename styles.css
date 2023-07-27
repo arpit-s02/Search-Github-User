@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background-color: lightgray;
+  background-color: #eee;
 }
 
 #main-container {
@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: #545454;
   color: white;
   border-radius: 10px;
   max-width: 800px;
@@ -72,6 +72,10 @@ p {
   margin: 10px 0px;
 }
 
+.user-details > p{
+  text-align: center;
+}
+
 .stats {
   width: 100%;
 }
@@ -81,6 +85,7 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 
 .user-details .stats div p {
   margin: 3px 0px;
